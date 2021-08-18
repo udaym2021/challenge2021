@@ -1,0 +1,15 @@
+<%= simple_form_for @dog do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, as: :text %>
+
+  <div class="field">
+    <%= f.label :images %>
+    <%= f.file_field :images, multiple: true %>
+  </div>
+
+  <% if @dog.images.any? %>
+    <%= image_tag @dog.images.first, style: "width: 200px; display: block" %>
+  <% end %>
+
+  <%= f.button :submit %>
+<% end %>

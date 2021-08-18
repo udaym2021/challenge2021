@@ -1,0 +1,251 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (2.3ms) [0m[32mUploaded file to key: rNgeoN9kwcoQDyJ3uXYvjFa6 (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "rNgeoN9kwcoQDyJ3uXYvjFa6"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:33.573952"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 1"], ["created_at", "2021-08-14 21:54:33.592564"], ["updated_at", "2021-08-14 21:54:33.592564"]]
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-14 21:54:33.593898"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:33.594998"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f04cb779-5f9a-47a0-8f1f-b0988af650a3) to Async(default) with arguments: #<GlobalID:0x00007fee21d6f080 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3] Performing ActiveStorage::AnalyzeJob (Job ID: f04cb779-5f9a-47a0-8f1f-b0988af650a3) from Async(default) with arguments: #<GlobalID:0x00007fee23b3f920 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3] [36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: rNgeoN9kwcoQDyJ3uXYvjFa6[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f04cb779-5f9a-47a0-8f1f-b0988af650a3] Performed ActiveStorage::AnalyzeJob (Job ID: f04cb779-5f9a-47a0-8f1f-b0988af650a3) from Async(default) in 6.95ms
+[36m  Disk Storage (4.0ms) [0m[32mUploaded file to key: GS11dX2DLDVhwbMdnTVbAcAc (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "GS11dX2DLDVhwbMdnTVbAcAc"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:33.614274"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 2"], ["created_at", "2021-08-14 21:54:33.616604"], ["updated_at", "2021-08-14 21:54:33.616604"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 2], ["blob_id", 2], ["created_at", "2021-08-14 21:54:33.617400"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:33.618209"], ["id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e8ff855e-352d-42df-8d94-173dc6d35c5a) to Async(default) with arguments: #<GlobalID:0x00007fee239359e0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+Processing by DogsController#index as HTML
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a] Performing ActiveStorage::AnalyzeJob (Job ID: e8ff855e-352d-42df-8d94-173dc6d35c5a) from Async(default) with arguments: #<GlobalID:0x00007fee22530850 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+  Rendering dogs/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a] [36m  Disk Storage (12.3ms) [0m[34mDownloaded file from key: GS11dX2DLDVhwbMdnTVbAcAc[0m
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dogs/index.html.erb within layouts/application (0.7ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a] Skipping image analysis because the mini_magick gem isn't installed
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8ff855e-352d-42df-8d94-173dc6d35c5a] Performed ActiveStorage::AnalyzeJob (Job ID: e8ff855e-352d-42df-8d94-173dc6d35c5a) from Async(default) in 18.39ms
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/dogs/new" for 127.0.0.1 at 2021-08-14 17:54:33 -0400
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (87.3ms)
+  Rendered dogs/new.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 406ms (Views: 398.2ms | ActiveRecord: 0.0ms)
+Started POST "/dogs" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Speck", "description"=>"Just a dog", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fee22637690 @tempfile=#<Tempfile:/var/folders/6s/tdf82psx6vg9047k9bn4yxnr0000gn/T/RackMultipart20210814-74186-1ql4oyo.jpg>, @original_filename="speck.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"dog[image]\"; filename=\"speck.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 28402\r\n">}, "commit"=>"Create Dog"}
+Unpermitted parameter: :image
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.5ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Speck"], ["description", "Just a dog"], ["created_at", "2021-08-14 21:54:34.097665"], ["updated_at", "2021-08-14 21:54:34.097665"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: nT8W4CAnfyy1vA5cW64KeEjb (checksum: Pnd2i6+BGpFSpRZVY1shbw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "nT8W4CAnfyy1vA5cW64KeEjb"], ["filename", "speck.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 28402], ["checksum", "Pnd2i6+BGpFSpRZVY1shbw=="], ["created_at", "2021-08-14 21:54:34.102622"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-14 21:54:34.105637"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:34.107136"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ab57ee98-9469-4d45-b53e-60c5af3ae52d) to Async(default) with arguments: #<GlobalID:0x00007fee22605d48 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Redirected to http://www.example.com/dogs/1
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 302 Found in 15ms (ActiveRecord: 1.7ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d] Performing ActiveStorage::AnalyzeJob (Job ID: ab57ee98-9469-4d45-b53e-60c5af3ae52d) from Async(default) with arguments: #<GlobalID:0x00007fee27a0c5b8 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/show.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d] [36m  Disk Storage (19.2ms) [0m[34mDownloaded file from key: nT8W4CAnfyy1vA5cW64KeEjb[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d] Skipping image analysis because the mini_magick gem isn't installed
+  Rendered dogs/show.html.erb within layouts/application (6.2ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d]   [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Completed 200 OK in 28ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ab57ee98-9469-4d45-b53e-60c5af3ae52d] Performed ActiveStorage::AnalyzeJob (Job ID: ab57ee98-9469-4d45-b53e-60c5af3ae52d) from Async(default) in 31.63ms
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: 8Y7qLAqMFXzW9MsqwWr3RwPx (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "8Y7qLAqMFXzW9MsqwWr3RwPx"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:34.151584"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 3"], ["created_at", "2021-08-14 21:54:34.154892"], ["updated_at", "2021-08-14 21:54:34.154892"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-14 21:54:34.156028"]]
+  [1m[36mDog Update (0.3ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:34.156950"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 196165c4-234c-47d9-b914-4ff24af928c6) to Async(default) with arguments: #<GlobalID:0x00007fee25824770 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1/edit" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by DogsController#edit as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6] Performing ActiveStorage::AnalyzeJob (Job ID: 196165c4-234c-47d9-b914-4ff24af928c6) from Async(default) with arguments: #<GlobalID:0x00007fee2584c5e0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/edit.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/_form.html.erb (8.9ms)
+  Rendered dogs/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6] [36m  Disk Storage (21.4ms) [0m[34mDownloaded file from key: 8Y7qLAqMFXzW9MsqwWr3RwPx[0m
+Started PATCH "/dogs/1" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6] Skipping image analysis because the mini_magick gem isn't installed
+Processing by DogsController#update as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Speck", "description"=>""}, "commit"=>"Update Dog", "id"=>"1"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [196165c4-234c-47d9-b914-4ff24af928c6] Performed ActiveStorage::AnalyzeJob (Job ID: 196165c4-234c-47d9-b914-4ff24af928c6) from Async(default) in 27.23ms
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["name", "Speck"], ["description", ""], ["updated_at", "2021-08-14 21:54:34.190515"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: TJ5yYCzGxz2KyGZ1r1NG47Ev (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "TJ5yYCzGxz2KyGZ1r1NG47Ev"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:34.206962"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 4"], ["created_at", "2021-08-14 21:54:34.209641"], ["updated_at", "2021-08-14 21:54:34.209641"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-14 21:54:34.210958"]]
+  [1m[36mDog Update (0.1ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:34.211841"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 556a8c34-e5cb-4174-bd09-0ed5274e07ec) to Async(default) with arguments: #<GlobalID:0x00007fee22237748 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs/1" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Processing by DogsController#show as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec] Performing ActiveStorage::AnalyzeJob (Job ID: 556a8c34-e5cb-4174-bd09-0ed5274e07ec) from Async(default) with arguments: #<GlobalID:0x00007fee2236e0f8 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dogs/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec] [36m  Disk Storage (3.8ms) [0m[34mDownloaded file from key: TJ5yYCzGxz2KyGZ1r1NG47Ev[0m
+  Rendered dogs/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec] Skipping image analysis because the mini_magick gem isn't installed
+Started DELETE "/dogs/1" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Processing by DogsController#destroy as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+  Parameters: {"id"=>"1"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [556a8c34-e5cb-4174-bd09-0ed5274e07ec] Performed ActiveStorage::AnalyzeJob (Job ID: 556a8c34-e5cb-4174-bd09-0ed5274e07ec) from Async(default) in 15.3ms
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Destroy (0.1ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: a6e4c6a9-92dd-4f25-bf5a-427b3700e27d) to Async(default) with arguments: #<GlobalID:0x00007fee2786e288 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Redirected to http://www.example.com/dogs
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d] Performing ActiveStorage::PurgeJob (Job ID: a6e4c6a9-92dd-4f25-bf5a-427b3700e27d) from Async(default) with arguments: #<GlobalID:0x00007fee23925a40 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+Started GET "/dogs" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Processing by DogsController#index as HTML
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d]   [1m[36mActiveStorage::Attachment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = ? LIMIT ?[0m  [["blob_id", 1], ["LIMIT", 1]]
+  Rendering dogs/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d]   [1m[36mActiveStorage::Blob Destroy (0.1ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d] [36m  Disk Storage (0.2ms) [0m[31mDeleted file from key: TJ5yYCzGxz2KyGZ1r1NG47Ev[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/TJ5yYCzGxz2KyGZ1r1NG47Ev/[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a6e4c6a9-92dd-4f25-bf5a-427b3700e27d] Performed ActiveStorage::PurgeJob (Job ID: a6e4c6a9-92dd-4f25-bf5a-427b3700e27d) from Async(default) in 10.91ms
+  Rendered collection of dogs/_thumbnail.html.erb [0 times] (0.0ms)
+  Rendered dogs/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "dogs"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: TcYQXp6R58dHtqNuXjC3HxiX (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "TcYQXp6R58dHtqNuXjC3HxiX"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:34.267927"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 5"], ["created_at", "2021-08-14 21:54:34.272801"], ["updated_at", "2021-08-14 21:54:34.272801"]]
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 1], ["blob_id", 1], ["created_at", "2021-08-14 21:54:34.274960"]]
+  [1m[36mDog Update (0.2ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:34.277442"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7d830e44-6eb3-43a3-9f18-a241312d92e0) to Async(default) with arguments: #<GlobalID:0x00007fee22d4eb18 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0] Performing ActiveStorage::AnalyzeJob (Job ID: 7d830e44-6eb3-43a3-9f18-a241312d92e0) from Async(default) with arguments: #<GlobalID:0x00007fee22f31b38 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: TcYQXp6R58dHtqNuXjC3HxiX[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7d830e44-6eb3-43a3-9f18-a241312d92e0] Performed ActiveStorage::AnalyzeJob (Job ID: 7d830e44-6eb3-43a3-9f18-a241312d92e0) from Async(default) in 6.61ms
+[36m  Disk Storage (5.7ms) [0m[32mUploaded file to key: uv45KJrsxWy9vhYzNrZPmvkm (checksum: /87llbrniD7EJAHbyYT4og==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "uv45KJrsxWy9vhYzNrZPmvkm"], ["filename", "bowie_toys.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 97334], ["checksum", "/87llbrniD7EJAHbyYT4og=="], ["created_at", "2021-08-14 21:54:34.292710"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mDog Create (0.2ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Good Pup 6"], ["created_at", "2021-08-14 21:54:34.302892"], ["updated_at", "2021-08-14 21:54:34.302892"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "images"], ["record_type", "Dog"], ["record_id", 2], ["blob_id", 2], ["created_at", "2021-08-14 21:54:34.304416"]]
+  [1m[36mDog Update (0.7ms)[0m  [1m[33mUPDATE "dogs" SET "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["updated_at", "2021-08-14 21:54:34.305780"], ["id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: cee6ad8a-498d-40c2-94f9-da1c77a5e65e) to Async(default) with arguments: #<GlobalID:0x00007fee23a5c5d0 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+Started GET "/" for 127.0.0.1 at 2021-08-14 17:54:34 -0400
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Processing by DogsController#index as HTML
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e] Performing ActiveStorage::AnalyzeJob (Job ID: cee6ad8a-498d-40c2-94f9-da1c77a5e65e) from Async(default) with arguments: #<GlobalID:0x00007fee2788a320 @uri=#<URI::GID gid://dog-profile/ActiveStorage::Blob/2>>
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 1], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? ORDER BY "active_storage_attachments"."id" ASC LIMIT ?[0m  [["record_id", 2], ["record_type", "Dog"], ["name", "images"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e] [36m  Disk Storage (71.4ms) [0m[34mDownloaded file from key: uv45KJrsxWy9vhYzNrZPmvkm[0m
+  Rendered collection of dogs/_thumbnail.html.erb [2 times] (71.5ms)
+  Rendered dogs/index.html.erb within layouts/application (73.0ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e] Skipping image analysis because the mini_magick gem isn't installed
+Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.6ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e]   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e]   [1m[36mActiveStorage::Blob Update (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e]   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [cee6ad8a-498d-40c2-94f9-da1c77a5e65e] Performed ActiveStorage::AnalyzeJob (Job ID: cee6ad8a-498d-40c2-94f9-da1c77a5e65e) from Async(default) in 86.53ms
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
